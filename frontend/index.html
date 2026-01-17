@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geomagnetic Storm Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1020;
+            color: #ffffff;
+            padding: 40px;
+        }
+        input, button {
+            margin: 8px 0;
+            padding: 8px;
+            width: 250px;
+        }
+        button {
+            background: #4caf50;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+
+<h2>🌌 Geomagnetic Storm Intensity Predictor</h2>
+
+<input id="duration" type="number" placeholder="Duration (hours)">
+<br>
+<input id="hour" type="number" placeholder="Hour of Day (0-23)">
+<br>
+<input id="day" type="number" placeholder="Day of Year (1-365)">
+<br>
+<input id="lag" type="number" placeholder="Previous KP Index">
+<br>
+<input id="event" type="text" placeholder="Event Type (e.g. CME)">
+<br>
+<input id="class" type="text" placeholder="Class Type (e.g. G1)">
+<br>
+
+<button onclick="predict()">Predict KP Index</button>
+
+<div id="result"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
